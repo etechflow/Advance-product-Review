@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * ETechFlow_AdvancedProductReviewsHyva — inject the Hyvä reviews UI on the PDP.
+ *
+ * Rendered inside the Hyvä product details section. The whole UI is driven by
+ * the base module's GraphQL API, so no server-side review markup is needed here.
+ *
+ * @author ETechFlow <etechflow0@gmail.com>
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="product.info.details">
+            <block class="ETechFlow\AdvancedProductReviewsHyva\Block\ProductReviews"
+                   name="etf.hyva.product.reviews"
+                   template="ETechFlow_AdvancedProductReviewsHyva::review/reviews.phtml"
+                   after="-"/>
+        </referenceContainer>
+    </body>
+</page>

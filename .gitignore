@@ -1,0 +1,14 @@
+# Magento generated / build artifacts (should never be committed)
+/**/generated/
+/**/var/
+/**/pub/static/
+/**/vendor/
+node_modules/
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.log
+*.swp
+.idea/
+.vscode/
