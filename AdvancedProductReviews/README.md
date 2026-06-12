@@ -159,27 +159,6 @@ Eight tables, all `etechflow_*`, foreign-keyed to core `review` with
 
 ---
 
-## Licensing & Activation
-
-This module is commercially licensed. On a production host it stays **inactive
-until a valid license key is present** — every storefront, headless
-(GraphQL/REST), and admin surface is gated, so there is no ungated bypass.
-
-- **Activate:** Stores ▸ Configuration ▸ eTechFlow ▸ Advanced Product Reviews ▸
-  **License** → paste your key. Or open any admin grid (Comments / Q&A /
-  Reminders / Analytics) to reach the in-admin **gate page**, choose a plan and
-  pay by card (Stripe) — your subscription key is issued by the eTechFlow portal
-  and saved automatically.
-- **Key types:** a per-module HMAC key, the shared eTechFlow **bundle** key (one
-  key activates every eTechFlow module on the host), or an **SP-XXXX**
-  subscription key validated against the licensing portal (with domain + server-IP
-  checks and soft expiry).
-- **Dev/staging is free:** `localhost`, `*.test`, `*.local`, `staging./dev.`
-  hosts, `*.magento.cloud`, ngrok tunnels, etc. bypass licensing automatically.
-  You can also set **Production Environment = No** to bypass on any host.
-- HMAC and bundle keys validate **offline** (no phone-home); only SP-XXXX keys
-  contact the portal, and results are cached.
-
 ## Uninstall
 ```bash
 bin/magento module:disable ETechFlow_AdvancedProductReviews

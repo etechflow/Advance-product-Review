@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * ETechFlow_AdvancedProductReviews — admin event observers
+ *
+ * @author ETechFlow <etechflow0@gmail.com>
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="controller_action_predispatch">
+        <observer name="etechflow_apr_enforce_license_gate"
+                  instance="ETechFlow\AdvancedProductReviews\Observer\EnforceLicenseGate"/>
+    </event>
+</config>
