@@ -27,7 +27,7 @@
                 <field id="license_key" translate="label comment" type="text" sortOrder="10"
                        showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>License Key</label>
-                    <comment><![CDATA[Paste your eTechFlow SP-XXXX subscription key. Generated automatically after Stripe payment. Bundle key also accepted. Get one at <a href="https://etechflow.com" target="_blank">etechflow.com</a>]]></comment>
+                    <comment><![CDATA[Paste your eTechFlow SP-XXXX subscription key. Generated automatically after checkout. Bundle key also accepted. Get one at <a href="https://etechflow.com" target="_blank">etechflow.com</a>]]></comment>
                 </field>
                 <field id="issued_key" translate="label comment" type="obscure" sortOrder="20"
                        showInDefault="1" showInWebsite="0" showInStore="0">
@@ -55,11 +55,11 @@
                 </field>
             </group>
 
-            <!-- ===================== PAYMENT (STRIPE) ===================== -->
+            <!-- ===================== PAYMENT (PADDLE) ===================== -->
             <group id="payment" translate="label" type="text" sortOrder="6"
                    showInDefault="1" showInWebsite="0" showInStore="0">
-                <label>Payment Settings (Stripe)</label>
-                <comment><![CDATA[Enter your Stripe API keys so merchants can pay for a license directly from this admin. Keys are encrypted.]]></comment>
+                <label>Payment Settings (legacy Stripe — no longer used)</label>
+                <comment><![CDATA[Legacy Stripe keys. No longer required: licence payments now run on module.etechflow.com via Paddle. Safe to leave blank.]]></comment>
                 <field id="stripe_secret_key" translate="label comment" type="obscure" sortOrder="10"
                        showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Stripe Secret Key</label>
