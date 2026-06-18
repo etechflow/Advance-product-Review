@@ -1,17 +1,20 @@
 <?php
 /**
- * ETechFlow_AdvancedProductReviewsHyva — Hyvä (Tailwind + Alpine) reviews UI.
+ * ETechFlow_AdvancedProductReviews — Hyvä (Tailwind + Alpine) reviews UI.
  *
  * The entire component is powered by the base module's GraphQL API
  * (etfReviewSummary / etfProductReviews / etfProductQuestions + mutations),
  * so this is a working example of the Phase 7 headless layer.
  *
- * @var \ETechFlow\AdvancedProductReviewsHyva\Block\ProductReviews $block
+ * Only renders under a Hyvä theme (see ProductReviews::isHyvaTheme); on Luma
+ * and other standard themes it returns early and outputs nothing.
+ *
+ * @var \ETechFlow\AdvancedProductReviews\Block\Hyva\ProductReviews $block
  * @var \Magento\Framework\Escaper $escaper
  */
 declare(strict_types=1);
 
-if (!$block->isModuleEnabled() || $block->getProductId() === 0) {
+if (!$block->isHyvaTheme() || !$block->isModuleEnabled() || $block->getProductId() === 0) {
     return;
 }
 

@@ -23,5 +23,16 @@
                 </argument>
             </arguments>
         </referenceBlock>
+
+        <!-- Hyvä (Tailwind + Alpine) reviews UI, driven by this module's GraphQL
+             API. The block self-detects the active theme and renders ONLY under
+             a Hyvä theme, so on Luma/standard themes it outputs nothing and the
+             standard review UI above is used instead. -->
+        <referenceContainer name="product.info.details">
+            <block class="ETechFlow\AdvancedProductReviews\Block\Hyva\ProductReviews"
+                   name="etf.hyva.product.reviews"
+                   template="ETechFlow_AdvancedProductReviews::hyva/review/reviews.phtml"
+                   after="-"/>
+        </referenceContainer>
     </body>
 </page>
